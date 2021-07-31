@@ -1,0 +1,32 @@
+<div class="home py-5">
+    <div class="card offset-sm-1 col-sm-10 p-2">
+        <div class="card-bady">
+            <div class="card-title text-center text-primary mb-3">
+                <h2>Create PDF</h2>
+            </div>
+            <div class="card-text">
+                <div >
+                    <div class=" form-control my-2 overflow-auto" >
+                        <ngx-editor-menu  [editor]="editor" [toolbar]="toolbar" [spellcheck]="true"  ></ngx-editor-menu>
+                    </div>
+                    <ngx-editor  [editor]="editor"  [(ngModel)]="content" name="content"[placeholder]="'Type here...'"></ngx-editor>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="my-2">
+            <div class="pull-right">
+                <div class="btn btn-primary " (click)="downloadPdf()">Download PDF</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="offset-sm-1 col-sm-10 my-5 " *ngIf="content">
+        <div class="form-control bg">
+            <div  [innerHtml]="content"></div>
+        </div>
+    </div>
+    
+    
+</div>

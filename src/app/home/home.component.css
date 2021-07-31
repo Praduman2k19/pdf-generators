@@ -1,0 +1,14 @@
+.home{
+    background: rgb(51, 75, 87);
+    /* background-image: url('https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg'); */
+    background-image: url('https://images.pexels.com/photos/5847760/pexels-photo-5847760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.edit-tool{
+    border: 1px rgb(197, 195, 195) solid;
+    border-radius: 2px;
+}
+.bg{
+    background: rgb(247, 245, 245);
+}
