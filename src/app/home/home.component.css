@@ -4,6 +4,22 @@
     background-image: url('https://images.pexels.com/photos/5847760/pexels-photo-5847760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 800px;
+    font-family: serif;
+}
+.btn{
+    font-weight: bold;
+    border-radius: 50px;
+    background: rgb(164, 166, 167);
+    border: 4px solid white;
+}
+.btn:hover{
+    border: 4px solid rgb(77, 75, 75);
+    /* color: white; */
+}
+.btn:active{
+    color: rgb(62, 63, 63);
+    border: 4px solid rgb(19, 18, 18);
 }
 .edit-tool{
     border: 1px rgb(197, 195, 195) solid;
@@ -11,4 +27,15 @@
 }
 .bg{
     background: rgb(247, 245, 245);
+}
+.pdf{
+    border-radius: 35px;
+}
+.text-pdfview{
+    font-size: 30px;
+    padding: 10px 0px;
+    border-radius: 6px 6px 0px 0px;
+}
+.text-pdf{
+    border-radius: 0px 0px 6px 6px;
 }

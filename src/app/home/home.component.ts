@@ -4,7 +4,8 @@ import { Editor, NgxEditorModule, Toolbar } from "ngx-editor";
 import { EventEmitter } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { jsPDF } from 'jspdf';
-// import *as jsPDF from 'jspdf';
+import * as jspdf from 'jspdf';
+import html2canvas from 'html2canvas';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -35,27 +36,26 @@ export class HomeComponent implements OnInit {
       "editable":true
     } 
   }
-
-  @ViewChild('content2')content2!: ElementRef;
+  data:any;
   downloadPdf()
   {
-  //   let doc=new jsPDF();
+    this.data = document.getElementById('contentToConvert');
+    html2canvas(this.data).then(canvas => {
+    let imgWidth = 210;
+    let imgHeight=0;
 
     
-  //   let content=this.content2.nativeElement;
-  //   let specialElementHandlears={
-  //     '#content':function(element: any,renderer: any){
-  //       return true;
-  //     }
-  //   };
-  //   doc.fromHTML(content.innerHTML,15,15,{
-  //     'width' :190,
-  //     'elementHandlears':specialElementHandlears
-  //   });
-  //     doc.save('test.pdf');
+    const contentDataURL = canvas.toDataURL('image/png')
+    let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
+    let position = 0;
+    pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)
+    pdf.save('new-file.pdf'); // Generated PDF
+    });
   }
+
   ngOnInit()
   {
 
   }
+
 }
