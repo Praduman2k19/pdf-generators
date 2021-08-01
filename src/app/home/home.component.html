@@ -23,8 +23,10 @@
     </div>
     
     <div class="offset-sm-1 col-sm-10 my-5 " *ngIf="content">
-        <div class="form-control bg">
-            <div  [innerHtml]="content"></div>
+        <div class="form-control bg" style="overflow-x: scroll;">
+            <div>
+                <div  [innerHtml]="content"></div>
+            </div>
         </div>
     </div>
     
