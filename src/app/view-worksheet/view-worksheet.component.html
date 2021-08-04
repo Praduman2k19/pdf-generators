@@ -1,0 +1,17 @@
+<section class="main-container">
+
+    <header></header>
+    <div class="inner-container bg-light">
+
+        <div class="content" id="contentToConvert">
+            <div class="text-center">
+                <h5>{{title}}</h5>
+            </div>
+            <div [innerHtml]="content"></div>
+        </div>
+        <div class="pull-right pt-5  m-5">
+            <div class="btn btn-primary mt-5 " (click)="downloadPdf()">Download PDF</div>
+        </div>
+
+    </div>
+</section>

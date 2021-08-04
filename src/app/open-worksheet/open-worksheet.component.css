@@ -5,7 +5,8 @@
     width: 100vw;
     display: grid;   
     place-items: center;
-    
+    padding: 0;
+    margin: 0;
 }
 .main-container header{
     background-color: #4e4e4e;
@@ -18,13 +19,24 @@
 .inner-container{
     z-index: 100;
     background: rgb(197, 197, 197);
+    margin: 80px 0px 20px 0px;
     width: 80vw;
-    /* margin: 80px 0px 20px 0px; */
     min-height: 80vh;
     display: flex;
-    place-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-h1H46ZlNmLIf5OKz9Zrv6k9h6Nsxoaq85Maxa6PqvtFWyeaE8Swe9ASUyIZJz_KBMU&usqp=CAU');
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0px 0px 10px 0px  rgba(0, 0, 0, 0.412);
+}
+
+.card{
+    width: 250px;
+    height: 230px;
+    box-shadow: 0px 0px 5px 0px  rgba(0, 0, 0, 0.312);
+}
+.card-title{
+    height: 100px;
+    overflow: hidden;
 }

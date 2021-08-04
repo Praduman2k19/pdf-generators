@@ -1,0 +1,17 @@
+<section class="main-container">
+
+    <header></header>
+    <div class="inner-container bg-light  text-center py-2 pt-5 mt-5" *ngIf="nodata">{{nodata}}</div>
+    <div class="inner-container bg-light  text-center py-2" *ngIf="nodata==''">
+            
+            <div class="card mx-2 my-4 " *ngFor="let item of worksheetData ; let i = index" >
+                <div class="card-body text-center">
+                  <h5 class="card-title ">{{item.title}}</h5>
+
+                    <a  class="btn btn-primary mx-2 " (click)="currentindex(i)" [routerLink]="['/view-worksheet']" routerLinkActive="router-link-active" >View</a>
+                    <a  class="btn btn-primary mx-2 px-3 "  [routerLink]="['/create']" (click)="currentindex(i)" >Edit</a>
+                  
+                </div>
+              </div>
+    </div>
+</section>

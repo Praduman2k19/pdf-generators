@@ -1,0 +1,53 @@
+<div class="create py-5" >
+    <div class="card offset-sm-1 col-sm-10 p-2">
+        <div class="card-bady">
+            <div class="card-title text-center text-primary mb-3">
+                <h2><b>Create Worksheet</b></h2>
+            </div>
+            <div class="card-text">
+                <div >
+                    <label ><b>Title</b></label>
+                    <div><input class="form-control w-50" type="text" placeholder="Worksheet name..." [(ngModel)]="title" name="title" ></div>
+                    <div class=" form-control my-2 " style="overflow-x: auto; "  >
+                        <ngx-editor-menu  [editor]="editor" [toolbar]="toolbar" [spellcheck]="true"  ></ngx-editor-menu>
+                    </div>
+                    <div>
+                        <ngx-editor  [editor]="editor"  [(ngModel)]="content" name="content"[placeholder]="'Type here...'" ></ngx-editor>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="my-2">
+            
+            
+            <div class="pull-right">
+                <div class="btn " (click)="downloadPdf()">Download PDF</div>
+            </div>
+            <div class="pull-right">
+                <div class="btn px-4" (click)="createNew()">Create New</div>
+            </div>
+            <div class="pull-right">
+                <div class="btn px-5" (click)="save()">Save</div>
+            </div>
+            <div class="pull-right">
+                <div class="btn" [routerLink]="['/open-worksheet']">All Worksheet</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class=" col-sm-10 offset-sm-1 my-5 " *ngIf="content!=''" >
+        <div class="pdf">
+            <div class="text-center bg text-pdfview"><b>Worksheet Preview</b></div>
+            <div class=" bg text-pdf" style="overflow-x: auto; ">
+                <div id="contentToConvert" class="p-5">
+                    <div class="text-center py-4"><h4><b>{{title}}</b></h4></div>
+                    <div  [innerHtml]="content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div [innerHtml]="ele"></div> -->
