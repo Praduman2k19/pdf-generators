@@ -19,9 +19,7 @@
     z-index: 100;
     background: rgb(197, 197, 197);
     width: 80vw;
-    /* margin: 80px 0px 20px 0px; */
     min-height: 80vh;
-    /* display: flex; */
     place-content: center;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-h1H46ZlNmLIf5OKz9Zrv6k9h6Nsxoaq85Maxa6PqvtFWyeaE8Swe9ASUyIZJz_KBMU&usqp=CAU');
     background-repeat: no-repeat;
