@@ -1,4 +1,4 @@
-## Live preview : https://atginternshipassignment.netlify.app/
+## Live preview : https://atg-internship-assignment.netlify.app/
 ## ATGIntenshipAssignment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
